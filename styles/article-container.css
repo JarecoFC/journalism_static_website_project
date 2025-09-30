@@ -1,15 +1,19 @@
 #articles-container {
   display: flex;
   flex-direction: column;
+  background-color: var(--web-black);
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 #articles-view-container {
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
+  overflow-y: scroll;
   flex-wrap: wrap;
   gap: 8px;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 #popular-articles-title {
@@ -25,18 +29,21 @@
 
 .article-card {
   display: grid;
-  grid-template-rows: 3fr 1fr;
-  height: 55%;
-  width: 25%;
+  grid-template-rows: 3fr 1fr 1fr ;
+  height: 75vh;
+  width: auto;
   background-color: var(--web-black);
-    border-radius: 8px;
+  border-radius: 8px;
+  filter: brightness(125%);
+  aspect-ratio: 3/4;
 }
 
 .article-card .article-bg-image {
   background-color: var(--red-secondary);
-  height: 100%;
-  width: 100%;
+  height: inherit;
+  width: auto;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .article-title {
@@ -44,6 +51,7 @@
   color: white;
   padding: 8px;
 }
+
 .article-description {
   font-family: var(--font-regular);
   color: white;
